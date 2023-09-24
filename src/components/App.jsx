@@ -21,22 +21,24 @@ function App() {
     });
   }
   return (
-    <div>
-      <Header />
-      <CreateArea addNewNote={addOne} />
-      {notes.map((item, index) => {
-        return (
-          <Note
-            key={index}
-            id={index}
-            title={item.title}
-            content={item.content}
-            deleteNote={deleteOne}
-          />
-        );
-      })}
+    <body>
+      <div>
+        <Header />
+        <CreateArea addNewNote={addOne} />
+        {notes.map((item, index) => {
+          return (
+            <Note
+              key={index}
+              id={index}
+              title={item.title}
+              content={item.content}
+              deleteNote={deleteOne}
+            />
+          );
+        })}
+      </div>
       <Footer />
-    </div>
+    </body>
   );
 }
 
